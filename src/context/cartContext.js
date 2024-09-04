@@ -2,11 +2,11 @@ import React, { createContext, useReducer } from 'react';
 import cartReducer from './cartReducer';
 
 
-/* Cart Context */
+/* контекст корзины */
 const cartContext = createContext();
 
 
-/* Initial State */
+/* исходное состояние*/
 const initialState = {
     isCartOpen: false,
     cartItems: []

@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import cartContext from '../context/cartContext';
 
-
 const Cart = () => {
 
     const { isCartOpen, cartItems, toggleCart, removeItem, incrementItem, decrementItem } = useContext(cartContext);
 
 
-    // disable the body-scroll when the Cart is open
+    // отключение скролла при открытой корзине
     useEffect(() => {
         const docBody = document.body;
 
@@ -20,7 +19,7 @@ const Cart = () => {
     }, [isCartOpen]);
 
 
-    // closing the Cart on clicking outside of it
+    // закрытие корзины при клике за ее пределами
     useEffect(() => {
         const outsideClose = (e) => {
             if (e.target.id === 'cart') {
